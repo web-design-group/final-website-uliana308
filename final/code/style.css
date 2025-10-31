@@ -1,0 +1,231 @@
+@font-face { 
+    font-family: 'Hibana';
+    src: url('fonts/Hibana-SubMedium.otf') format('truetype');
+}
+
+
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl
+):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /** Пригодится в большинстве ситуаций(когда, например, нужно будет "прижать" футер к низу сайта)*/
+  height: 100%;
+  /**Плавный скролл*/
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+    --color-black: #171717;
+    --color-white: #FFFFFF;
+    --color-darkGray: #464646;
+    --color-dark2Gray: #3D3D3D;
+    --color-gray: #909192;
+    --color-grayLight: #EBEBEB;
+    --color-red: #D82600;
+    --color-darkRed: #9A1B00;
+    --font-family-base: "Hibana", sans-serif;
+
+    --transition-duration: 0.2s;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 400px;
+}
+
+.text-b1 {
+    font-family: var(--font-family-base);
+    font-size: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.text-b2 {
+    font-family: var(--font-family-base);
+    font-size: 40px;
+    letter-spacing: 0%;
+    text-align: left;
+    line-height: 48px;
+}
+
+body{
+    font-family: var(--font-family-base);
+    background-color: var(--color-white);
+}
+
+a,button{
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: var(--color-black);
+}
+
+a:hover {
+    color: var(--color-red);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 280px;
+    padding-block: 24px;
+    
+}
+
+.header-logo{
+    flex-shrink: 0;
+}
+
+.header-menu-list {
+    display: flex;
+    column-gap: 40px;
+}
+
+.header-menu-link {
+    text-transform: lowercase;
+    text-decoration: none;
+    width: 125px;
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+    padding: 8px 12px 8px 12px;
+}
+
+.header-menu-link.is-current::after{
+    color: var(--color-red);
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 280px;
+    padding-block: 24px;
+}
+
+
+.banner-button {
+    background-color: var(--color-black);
+    width: 320px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрируем текст по вертикали */
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 400px;
+    text-transform: lowercase;
+    white-space: nowrap;;
+    cursor: pointer;
+}
+
+.banner-button::after {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  background: url('images/arrow-right-long.svg') center/contain no-repeat;
+  flex-shrink: 0;
+}
