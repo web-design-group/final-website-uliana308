@@ -130,18 +130,39 @@ h1{
     font-size: 400px;
 }
 
-.text-b1 {
-    font-family: var(--font-family-base);
-    font-size: 24px;
-    letter-spacing: 0%;
-    text-align: left;
+h4{
+  text-transform: uppercase;
+  font-size: 80px;
+  line-height: 144px;
 }
-.text-b2 {
+
+h6{
+  font-size: 48px;
+  line-height: 47px;
+  margin: 0;
+  padding: 0;
+}
+
+.text-b1{
     font-family: var(--font-family-base);
     font-size: 40px;
     letter-spacing: 0%;
     text-align: left;
     line-height: 48px;
+}
+
+.text-b4{
+    font-family: var(--font-family-base);
+    font-size: 32px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.text-b3 {
+    font-family: var(--font-family-base);
+    font-size: 24px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 body{
@@ -197,35 +218,327 @@ a:hover {
 }
 .content{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding-inline: 280px;
     padding-block: 24px;
+    gap:260px;
 }
 
+.banner-title{
+  display: flex;
+  justify-content: center;
 
-.banner-button {
-    background-color: var(--color-black);
-    width: 320px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Центрируем текст по вертикали */
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: 400px;
-    text-transform: lowercase;
-    white-space: nowrap;;
-    cursor: pointer;
+}
+.banner-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.banner-button::after {
-  content: "";
-  display: inline-block;
+.banner-button{
+  width: 320px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  padding: 16px 20px;
+  background-color: var(--color-black);
+  text-decoration: none;
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.banner-button:hover {
+
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.banner-button .button-icon {
   width: 28px;
   height: 28px;
-  margin-left: 10px;
-  background: url('images/arrow-right-long.svg') center/contain no-repeat;
-  flex-shrink: 0;
+}
+
+/*ГАЛЕРЕЯ*/
+
+.gallery-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: var(--color-black); 
+  z-index: 0;
+}
+
+.photo-gallery {
+  position: relative;
+  z-index: 1;
+  padding-block: 80px;   /* внутренний отступ сверху и снизу в галерее */
+  padding-inline: 280px; /* повторяет отступы как в .content */
+}
+
+.photo-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.photo-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s;
+  display: block;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  color: var(--color-white);
+  font-size: 32px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 2;
+  font-family: inherit;
+}
+
+.photo-item:hover img {
+  filter: brightness(55%);
+}
+
+.photo-item:hover .photo-caption {
+  opacity: 1;
+}
+
+/*ЗАЛЫ*/
+
+.halls {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.halls-heading, reviews-heading {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  gap: 20px;
+}
+
+.halls-heading h4, .reviews-heading h4, .price-heading h4{
+  line-height: 84px;
+  margin: 0;
+  padding: 0;
+}
+
+.halls-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 44px;
+  justify-content: flex-start; 
+  width: 100%;
+}
+
+.arrow-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end; 
+}
+
+.arrow-icon-right {
+  color: var(--color-black); 
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arrow-icon-left {
+  color: var(--color-gray); 
+  cursor: pointer;
+  transition: color 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.arrow-icon-right:hover {
+  color: var(--color-dark2Gray); 
+}
+
+/*НАДПИСЬ*/
+
+.label {
+  width: 100%;
+  display: flex;
+  height: 650px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.main-label h4 {
+  text-align: center; 
+}
+
+.rotated-photo {
+  position: absolute;
+  top: 78%; 
+  left: 62%; 
+  transform: translate(-50%, -50%) rotate(-4deg); 
+  width: 430px; 
+  z-index: 10; 
+}
+
+/*ЦЕНА*/
+
+.price{
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.price-heading {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  gap: 20px;
+}
+
+.price-1{
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+  margin-left: 230px;
+}
+
+.paket{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start;
+  gap:12px;
+  width: 352px;
+}
+.info-price{
+  display: flex; 
+  flex-direction: row; 
+  gap:109px;
+  width: 100%;
+}
+
+.points {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  margin-bottom: 8px; 
+}
+
+.points .line {
+  width: 30px;
+  height: 1px;
+  background-color: var(--color-black);
+}
+
+.button_filled_small {
+  width: 332px;
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button_filled_small:hover {
+  background-color: var(--color-red);
+}
+
+.button_filled_small .button-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.button-wrapper {
+  display: flex;
+  margin-left: 460px;
+}
+
+.horizontal-line {
+  width: 100%;
+  max-width: 1130px;
+  min-width: 700px;
+  height: 1px;
+  background-color: var(--color-black);
+  margin-bottom: 8px;
+}
+
+/*ОТЗЫВЫ*/
+
+.review{
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.review-1 {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reviews-heading {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  gap: 20px;
+}
+
+.about-person{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 20px;
+}
+
+.person-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.photo-avatar{
+  width: 105px;
+  height: 105px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row; 
+  gap: 4px;
+}
+
+.date{
+  color: var(--color-gray);
 }
