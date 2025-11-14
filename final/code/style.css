@@ -718,6 +718,7 @@ transform: rotate(180deg);
   height: 100%;
   margin-bottom: 40px;
   background: #EBEBEB;   
+  column-gap: 20px;
 }
 
 .footer-main,

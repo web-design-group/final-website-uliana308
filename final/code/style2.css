@@ -326,16 +326,16 @@ a:hover {
 /*Футер*/
 
 .footer-grid {
-    padding-inline: 280px;
-    padding-top: 40px;     
-    padding-bottom: 100px;
-    display: grid;
-    grid-template-columns: repeat(12, 95px);
-    column-gap: 20px;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 40px;
-    background: #EBEBEB;   
+  padding-inline: 280px;
+  padding-top: 40px;     
+  padding-bottom: 100px;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(12, 95px);
+  width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
+  background: #EBEBEB;   
 }
 
 .footer-main,
@@ -358,15 +358,14 @@ a:hover {
 }
 
 .footer-grid .text-b3 {
-    display: block;
-    margin-bottom: 48px;
+  display: block;
+  margin-bottom: 48px;
 }
 
 .footer-main li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .footer-grid a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
