@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <title>LUMA</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="animation.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -14,14 +15,14 @@
             alt="LUMA Logo"
             width="86" height="59" loading="lazy"
         />
-    </a>
+    </a> 
     <nav class="header-menu text-b3">
         <ul class="header-menu-list">
                 <li class="header-menu-item">
-                    <a class="header-menu-link is-current" href="/">Главная</a>
+                    <a class="header-menu-link is-current" href="index.html">Главная</a>
                 </li>
                 <li class="header-menu-item">
-                    <a class="header-menu-link" href="/">Галерея</a>
+                    <a class="header-menu-link" href="page2.html">Галерея</a>
                 </li>
                 <li class="header-menu-item">
                     <a class="header-menu-link" href="/">Контакты</a>
@@ -41,15 +42,21 @@
             <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon" />
           </a>
         </div>
-      </div>
+        <img class="overlay-photo" src="./images/photo1.png" />
+        <img class="overlay-photo" src="./images/photo2.png" />
+        <img class="overlay-photo" src="./images/photo3.png" />
+        <img class="overlay-photo" src="./images/photo4.png" />
+        <img class="overlay-photo" src="./images/photo5.png" />
+        <img class="overlay-photo" src="./images/photo6.png" />
+        </div>
     </section>
     <div class="gallery-bg">
     <section class="photo-gallery">
-      <div class="recent-heading">
-        <div class ="text-b4" style="width: 213px; color: white;">
-          (последние фотосессии)
-        </div>
         <div class="photo-list">
+          <div class ="photo-item" style=" color: white;">
+          (последние <br/>
+          фотосессии)
+        </div>
           <div class="photo-item">
             <img src="./images/main-gallery-1.png" alt="ROSE" />
             <div class="photo-caption">ROSE</div>
@@ -78,36 +85,33 @@
         </div>
     </section>
     </div>
-
     <section class="halls">
       <div class="halls-heading">
-        <div class ="text-b4" style="width: 213px;">
+        <div class="text-b4" style="width: 213px;">
           (наши залы)
         </div>
         <h4>съёмочная<br/>
-        площадка
+          площадка
         </h4>
       </div>
-      <img src="./images/hall1.png" alt="Лофт Зал" />
+      <img id="hall-image" src="./images/hall1.png" alt="Лофт Зал" />
       <div class="halls-info">
-        <h6>Lumal<br/>
-        Minimal
-        </h6>
-        <div class="halls-info text-b3">
-          Светлый зал с идеальным естественным светом. <br/>
-          Подходит для лаконичных фэшн-портретов, <br/>
+        <h6 id="hall-title">Lumal<br/>Minimal</h6>
+        <div class="halls-info text-b3" id="hall-description">
+          Светлый зал с идеальным естественным светом.<br/>
+          Подходит для лаконичных фэшн-портретов,<br/>
           бьюти-съемки и каталогов.
         </div>
-      <div class="arrow-buttons">
-        <svg class="arrow-icon-left" width="97" height="65" viewBox="0 0 97 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.44434 32L89.4443 32" stroke="currentColor" stroke-width="8"/>
-          <path d="M62.4443 3L91.4443 32.1245L62.4443 61" stroke="currentColor" stroke-width="7"/>
-        </svg>
-        <svg class="arrow-icon-right" width="97" height="65" viewBox="0 0 97 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.44434 32L89.4443 32" stroke="currentColor" stroke-width="8"/>
-          <path d="M62.4443 3L91.4443 32.1245L62.4443 61" stroke="currentColor" stroke-width="7"/>
-        </svg>
-      </div>
+        <div class="arrow-buttons">
+          <svg id="arrow-left" class="arrow-icon-left" width="97" height="65" viewBox="0 0 97 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer">
+            <path d="M3.44434 32L89.4443 32" stroke="currentColor" stroke-width="8"/>
+            <path d="M62.4443 3L91.4443 32.1245L62.4443 61" stroke="currentColor" stroke-width="7"/>
+          </svg>
+          <svg id="arrow-right" class="arrow-icon-right" width="97" height="65" viewBox="0 0 97 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer">
+            <path d="M3.44434 32L89.4443 32" stroke="currentColor" stroke-width="8"/>
+            <path d="M62.4443 3L91.4443 32.1245L62.4443 61" stroke="currentColor" stroke-width="7"/>
+          </svg>
+        </div>
       </div>
     </section>
     <section class="label">
@@ -131,102 +135,65 @@
       <div class="price-1">
         <div class="horizontal-line"></div>
         <div class="info-price">
-          
           <div class="paket text-b1">
             «Базовый» пакет
-            <text-b1 style="color: #D82600;"> 8 000 ₽ </text-b1>
+            <span style="color: #D82600;"> 8 000 ₽ </span>
           </div>
-          <div class="all-points">
-            <div class="points text-b3">
-              <div class="line"></div>
-              Аренда зала на 1 час
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Услуги профессионального фотографа
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Подбор 5 лучших ретушированных фотографий
-            </div>
-          </div>
+          <ul class="all-points">
+            <li>Аренда зала на 1 час</li>
+            <li>Услуги профессионального фотографа</li>
+            <li>Подбор 5 лучших ретушированных фотографий</li>
+          </ul>
         </div>
-          <div class="button-wrapper">
-            <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0%; text-align: left">
-              записаться в студию
-              <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon" />
-            </button>
-          </div>
+        <div class="button-wrapper">
+          <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0%; text-align: left">
+            записаться в студию
+            <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon" />
+          </button>
+        </div>
       </div>
       <div class="price-1">
         <div class="horizontal-line"></div>
         <div class="info-price">
           <div class="paket text-b1">
             «Комфорт» пакет
-            <text-b1 style="color: #D82600;"> 12 000 ₽ </text-b1>
+            <span style="color: #D82600;"> 12 000 ₽ </span>
           </div>
-          <div class="all-points">
-            <div class="points text-b3">
-              <div class="line"></div>
-              Аренда зала на 2 часа
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Услуги профессионального фотографа
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Услуги визажиста (создание 1 образа)
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Подбор 10 лучших ретушированных фотографий
-            </div>
-          </div>
+          <ul class="all-points">
+            <li>Аренда зала на 2 часа</li>
+            <li>Услуги профессионального фотографа</li>
+            <li>Услуги визажиста (создание 1 образа)</li>
+            <li>Подбор 10 лучших ретушированных фотографий</li>
+          </ul>
         </div>
-          <div class="button-wrapper">
-            <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0%; text-align: left">
-              записаться в студию
-              <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon" />
-            </button>
-          </div>
+        <div class="button-wrapper">
+          <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0%; text-align: left">
+            записаться в студию
+            <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon" />
+          </button>
+        </div>
       </div>
       <div class="price-1">
         <div class="horizontal-line"></div>
         <div class="info-price">
           <div class="paket text-b1">
-            «Премиум» пакет
-            <text-b1 style="color: #D82600;"> 20 000 ₽ </text-b1>
+            <span style="font-size: 36px;"> «Премиум» пакет</span>
+            <span style="color: #D82600;"> 20 000 ₽ </span>
           </div>
-          <div class="all-points">
-            <div class="points text-b3">
-              <div class="line"></div>
-              Аренда зала на 3 часа
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Услуги профессионального фотографа
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Услуги визажиста и стилиста (создание 2 образов)
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Подбор 20+ лучших ретушированных фотографий
-            </div>
-            <div class="points text-b3">
-              <div class="line"></div>
-              Срочная обработка 3 фото в день съемки
-            </div>
-          </div>
+          <ul class="all-points">
+            <li>Аренда зала на 3 часа</li>
+            <li>Услуги профессионального фотографа</li>
+            <li>Услуги визажиста и стилиста (создание 2 образов)</li>
+            <li>Подбор 20+ лучших ретушированных фотографий</li>
+            <li>Срочная обработка 3 фото в день съемки</li>
+          </ul>
         </div>
-          <div class="button-wrapper">
-            <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0%; text-align: left">
-              записаться в студию
-              <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon" />
-            </button>
-          </div>
+        <div class="button-wrapper">
+          <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0%; text-align: left">
+            записаться в студию
+            <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon" />
+          </button>
+        </div>
       </div>
     </section>
     <section class="review">
@@ -239,7 +206,7 @@
         </h4>
       </div>
       <div class="all-reviews">
-      <div class="review-1" style="margin-left: 230px;" >
+      <div class="review-1">
         <div class="about-person">
           <img src="./images/photo-avatar-1.png" alt="аватар" class="photo-avatar"/>
           <div class="person-info">
@@ -266,7 +233,7 @@
             Очень помог администратор в процессе. Рекомендую!
         </div>
       </div>
-      <div class="review-1" style="margin-left: 805px;">
+      <div class="review-1">
         <div class="about-person">
           <img src="./images/photo-avatar-2.png" alt="аватар" class="photo-avatar"/>
           <div class="person-info">
@@ -292,7 +259,7 @@
             Отличный свет, стильный интерьер и дружелюбная обстановка.
         </div>
       </div>
-      <div class="review-1" style="margin-left: 345px;">
+      <div class="review-1">
         <div class="about-person">
           <img src="./images/photo-avatar-3.png" alt="аватар" class="photo-avatar"/>
           <div class="person-info">
@@ -318,7 +285,7 @@
             Получил море удовольствия и шикарные фотографии.
         </div>
       </div>
-      <div class="review-1" style="margin-left: 920px;">
+      <div class="review-1">
         <div class="about-person">
           <img src="./images/photo-avatar-4.png" alt="аватар" class="photo-avatar"/>
           <div class="person-info">
@@ -344,7 +311,7 @@
             Свет, пространство, vibe — всё на высоте!
         </div>
       </div>
-      <div class="review-1" style="margin-left: 230px;">
+      <div class="review-1">
         <div class="about-person">
           <img src="./images/photo-avatar-5.png" alt="аватар" class="photo-avatar"/>
           <div class="person-info">
@@ -373,5 +340,125 @@
       </div>
       </div>
     </section>
-<body>     
+    <section class="FAQ">
+      <div class="FAQ-heading">
+        <div class="text-b4" style="width: 213px;">
+          (FAQ)
+        </div>
+        <h4>часто задаваемые<br/>
+          вопросы
+        </h4>
+      </div>
+      <div class="accordion">
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Можно ли приходить со своим реквизитом?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+
+            </div>
+            <div class="accordion-item__body">
+                <p>да, можно! креатив всегда приветствуется. </p>
+            </div>
+        </div>
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Какое количество человек разрешено на съемке?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body ">
+                <p>обычно разрешено до 5 человек, но по договорённости возможно больше.</p>
+            </div>
+        </div>
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Можно ли отменить запись в день фотосессии?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>отмена в день фотосессии невозможна, предоплата не возвращается.</p>
+            </div>
+        </div>
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Какое оборудование вы используете?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>используется профессиональная камера, студийный свет и необходимые аксессуары.</p>
+          </div>
+        </div>
+                <div class="accordion__item  text-b4">
+            <div class="accordion-item__header">
+                <p>Можно ли получить исходные фотографии?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>да, по запросу исходные файлы могут быть предоставлены.</p>
+          </div>
+        </div>
+
+    </div>
+
+    </section>
+  </main>
+  <footer class="footer-grid">
+      <div class="footer-logo" style="grid-column: 1 / 3;">
+          <img src="./images/logo.png" alt="LUMA" />
+      </div>
+      <nav class="footer-main" style="grid-column: 6 / 8;">
+          <text-b3>ОСНОВНОЕ</text-b3>
+          <div class="footer-info">
+          <ul>
+          <li><a href="index.html">главная</a></li>
+          <li><a href="page2.html">галерея</a></li>
+          <li><a href="/">контакты</a></li>
+          </ul>
+          </div>
+      </nav>
+      <div class="footer-socials" style="grid-column: 8 / 10;">
+          <text-b3>СОЦ.СЕТИ</text-b3>
+          <div class="footer-info text-b3">
+              телеграм
+              <a href="https://t.me/ulipolonskaya" target="_blank" class="socialname" style="color: #909192;">lumastudio</a>
+              инстаграм
+              <a href="https://www.instagram.com/ulipolonskaya" target="_blank" class="socialname" style="color: #909192;">LUMA_studio</a>
+              вконтакте
+              <a href="https://vk.com/ulipolonskaya" target="_blank" class="socialname" style="color: #909192;">LUMAstudio</a>
+          </div>
+      </div>
+      <div class="footer-contacts" style="grid-column: 10 / 13;">
+          <text-b3>КОНТАКТЫ</text-b3>
+          <div class="footer-info">
+              <div class="address">
+              адрес<br/>
+              <span style="color: #909192;">Заставская улица, 46к1</span>
+              </div>
+              <div class="contacts-phone">
+              телефон<br/>
+              <span style="color: #909192;">+7 (812) 988-44-63</span>
+              </div>
+              <div class="contacts-email">
+              email<br/>
+              <span style="color: #909192;">lumastudio@mail.ru</span>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>     
 </html>
