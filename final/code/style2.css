@@ -185,6 +185,7 @@ a:hover {
 .header-menu-list {
     display: flex;
     column-gap: 40px;
+    
 }
 
 .header-menu-link {
@@ -196,7 +197,7 @@ a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10;
+    gap: 10px;
     padding: 8px 12px 8px 12px;
 }
 
@@ -208,6 +209,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 260px;
+    min-width: 1410px;
 }
 
 .gallery-heading{
@@ -248,28 +250,29 @@ a:hover {
 
 .photo-list {
     display: grid;
-    grid-template-columns: repeat(12, 95px);
+    grid-template-columns: repeat(12, minmax(1fr, 95px));
     column-gap: 20px;
 }
 
 .photo-list .photo-item:first-child{
     grid-column: 3 / 7; 
-    margin-bottom: 20px; 
+    margin-bottom: -262px; 
 }
 
 .photo-list .photo-item:nth-child(2){
     grid-column:  9 / 13; 
     align-self: start;
+    margin-bottom: 20px; 
 }
 
 .photo-list .photo-item:nth-child(3){
     grid-column:  1 / 5; 
-    margin-bottom: 20px;
+    margin-top: 282px; 
+    margin-bottom: 20px; 
 }
 
 .photo-list .photo-item:nth-child(4){
     grid-column:  7 / 13; 
-    margin-top: -282px; 
     margin-bottom: 20px; 
     align-self: start;
 }
@@ -282,12 +285,12 @@ a:hover {
 
 .photo-list .photo-item:nth-child(6){
     grid-column:  9 / 13; 
-    margin-top: -76px; 
+    margin-top: -70px; 
+    margin-bottom: -110px;
 }
 
 .photo-list .photo-item:nth-child(7){
     grid-column:  1 / 9; 
-    margin-top: -104px; 
 }
 
 .photo-item {
@@ -296,7 +299,7 @@ a:hover {
 }
 
 .photo-item img {
-    width: auto;       
+    width: 100%;       
     height: auto;       
     display: block;
     object-fit: cover;  
@@ -331,7 +334,7 @@ a:hover {
   padding-bottom: 100px;
   display: grid;
   column-gap: 20px;
-  grid-template-columns: repeat(12, 95px);
+  grid-template-columns: repeat(12, minmax(1fr, 95px));
   width: 100%;
   height: 100%;
   margin-bottom: 40px;
@@ -369,3 +372,4 @@ a:hover {
 .footer-grid a {
   text-decoration: none;
 }
+
