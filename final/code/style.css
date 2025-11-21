@@ -569,7 +569,7 @@ a:hover {
 
 .all-reviews{
   display: grid;
-  grid-template-columns: repeat(12, 95px);
+  grid-template-columns: repeat(12, minmax(70px, 95px));
   column-gap: 20px;
   row-gap: 64px;
 }
@@ -596,7 +596,6 @@ a:hover {
 
 
 .review-1 {
-  width: 440px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -649,7 +648,7 @@ a:hover {
 
 .accordion{
   display: grid;
-  grid-template-columns: repeat(12, 95px);
+  grid-template-columns: repeat(12, minmax(70px, 95px));
   column-gap: 20px;
   padding-bottom: 200px;
 
@@ -709,23 +708,20 @@ transform: rotate(180deg);
 /*Футер*/
 
 .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(70px, 95px));
+  column-gap: 20px;
+  align-content: space-between;
   padding-inline: 280px;
   padding-top: 40px;     
   padding-bottom: 100px;
-  display: grid;
-  grid-template-columns: repeat(12, 95px);
   width: 100%;
-  height: 100%;
-  margin-bottom: 40px;
   background: #EBEBEB;   
-  column-gap: 20px;
 }
 
 .footer-main,
 .footer-socials,
 .footer-contacts{
-    display: flex;
-    flex-direction: column;
     gap: 28px;
     font-family: var(--font-family-base);
     font-size: 24px;
@@ -741,7 +737,6 @@ transform: rotate(180deg);
 }
 
 .footer-grid .text-b3 {
-  display: block;
   margin-bottom: 48px;
 }
 
@@ -752,3 +747,4 @@ transform: rotate(180deg);
 .footer-grid a {
   text-decoration: none;
 }
+
