@@ -46,7 +46,7 @@ body {
 .custom-heading {
     color: var(--color-black);      
     font-size: 128px;  
-    line-height: 0.88;  
+    line-height: 0.90;  
 }
 
 .divider-line {
@@ -55,37 +55,6 @@ body {
     background: var(--color-gray);
 }
 
-.custom-heading-wrapper.pagination {
-    gap: 0;
-}
-
-.custom-heading-wrapper .page-item {
-    display: flex;
-    align-items: center;
-}
-
-.custom-heading-wrapper .page-link {
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: transparent;
-    color: var(--color-black);      
-    font-size: 128px;  
-    line-height: 0.88;  
-}
-
-.custom-heading-wrapper .page-link:hover {
-    color: var(--color-dark2Gray);
-    background: transparent;     
-    border-color: transparent; 
-}
-
-@media (max-width: 1400px) {
-  .custom-heading-wrapper {
-    flex-wrap: wrap; 
-    justify-content: center;
-  }
-}
 
 .booking-info .label,
 .booking-info .value,
@@ -193,4 +162,58 @@ body {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+.steps-tabs-container .ui-tabs-nav {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.steps-tabs-container .ui-tabs-nav li {
+    display: flex !important;
+    border: none !important;
+
+}
+
+.steps-tabs-container .ui-tabs-nav li.divider {
+    padding: 0 12px !important;
+}
+
+.steps-tabs-container .ui-tabs-nav a {
+    font-family: var(--bs-body-font-family) !important;
+    font-size: 128px !important;
+    line-height: 0.88 !important;
+    color: var(--color-black) !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    transition: color var(--transition-duration) !important;
+}
+
+.steps-tabs-container .ui-tabs-nav a:hover {
+    color: var(--color-dark2Gray) !important;
+}
+
+.steps-tabs-container .ui-tabs-nav .ui-state-active a {
+    color: #D82600 !important; 
+}
+
+.steps-tabs-container .ui-tabs-panel {
+    padding: 20px 0 !important;
+    background: none !important;
+
+}
+
+
+@media (max-width: 1400px) {
+    .steps-tabs-container .ui-tabs-nav {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
 }

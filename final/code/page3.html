@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="style3.css" />
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
         <title>LUMA</title>
     </head>
     <body>
@@ -30,78 +32,62 @@
                 <h2 class="custom-heading mb-4">ЗАПИСЬ</h2>
             </div>
             <div class="col-12 col-xxl-5">
-                <nav aria-label="Steps">
-                    <ul class="pagination justify-content-end custom-heading-wrapper mb-0">
-                        <li class="page-item">
-                            <a class="page-link page-link-big" href="/">
-                                1
-                            </a>
-                        </li>
-
-                        <li class="page-item d-flex align-items-center">
-                            <span class="divider-line"></span>
-                        </li>
-
-                        <li class="page-item">
-                            <a class="page-link page-link-big" href="/">
-                                2
-                            </a>
-                        </li>
-
-                        <li class="page-item d-flex align-items-center">
-                            <span class="divider-line"></span>
-                        </li>
-
-                        <li class="page-item">
-                            <a class="page-link page-link-big" href="/">
-                                3
-                            </a>
-                        </li>
-
-                        <li class="page-item d-flex align-items-center">
-                            <span class="divider-line"></span>
-                        </li>
-
-                        <li class="page-item">
-                            <a class="page-link page-link-big" href="page3.html">
-                                4
-                            </a>
-                        </li>
+                
+                <div id="steps-tabs" class="steps-tabs-container">
+                    <ul class="steps-tabs-nav">
+                        <li><a href="#step-1">1</a></li>
+                        <li class="divider"><span class="divider-line"></span></li>
+                        <li><a href="#step-2">2</a></li>
+                        <li class="divider"><span class="divider-line"></span></li>
+                        <li><a href="#step-3">3</a></li>
+                        <li class="divider"><span class="divider-line"></span></li>
+                        <li><a href="#step-4" class="active-step">4</a></li>
                     </ul>
-                </nav>
+                    
+                    <div id="step-1" class="step-content">
+                        <p>Выбор тарифа</p>
+                    </div>
+                    <div id="step-2" class="step-content">
+                        <p>Выбор зала</p>
+                    </div>
+                    <div id="step-3" class="step-content">
+                        <p>Выбо даты и времени</p>
+                    </div>
+                    <div id="step-4" class="step-content active-step-content">
+                        <div class="container my-5">
+                            <div class="row">
+                                <div class="col-12 col-md d-flex flex-column px-0 booking-info">
+                                    <p class="label">ТАРИФ</p>
+                                        <span class="divider-line"></span>
+                                    <p class="value" style="color: #D82600;" >базовый</p>
+                                    <p class="label">ЗАЛ</p>
+                                        <span class="divider-line"></span>
+                                    <p class="value" style="color: #D82600;" >minimal</p>
+                                    <p class="label">ДАТА<br>И ВРЕМЯ</p>
+                                        <span class="divider-line"></span>
+                                    <p class="value" style="color: #D82600;">29.11 11:00</p>
+                                </div>
+                                <div class="col-12 col-md-6 form-column">
+                                    <div class="mb-4">
+                                        <label class="form-label custom-label">Имя</label>
+                                        <input type="text" class="form-control custom-input">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label custom-label">Телефон</label>
+                                        <input type="text" class="form-control custom-input">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label custom-label">Телеграм</label>
+                                        <input type="text" class="form-control custom-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- ОСНОВНАЯ ИНФА -->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-12 col-md d-flex flex-column px-0 booking-info">
-                <p class="label">ТАРИФ</p>
-                    <span class="divider-line"></span>
-                <p class="value" style="color: #D82600;" >базовый</p>
-                <p class="label">ЗАЛ</p>
-                    <span class="divider-line"></span>
-                <p class="value" style="color: #D82600;" >minimal</p>
-                <p class="label">ДАТА<br>И ВРЕМЯ</p>
-                    <span class="divider-line"></span>
-                <p class="value" style="color: #D82600;">29.11 11:00</p>
-            </div>
-            <div class="col-12 col-md-6 form-column">
-                <div class="mb-4">
-                    <label class="form-label custom-label">Имя</label>
-                    <input type="text" class="form-control custom-input">
-                </div>
-                <div class="mb-4">
-                    <label class="form-label custom-label">Телефон</label>
-                    <input type="text" class="form-control custom-input">
-                </div>
-                <div class="mb-4">
-                    <label class="form-label custom-label">Телеграм</label>
-                    <input type="text" class="form-control custom-input">
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- КНОПКИ -->
     <div class="container mt-5">
         <div class="row">
@@ -118,8 +104,14 @@
             </div> 
         </div> 
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+    <script>
+        $(document).ready(function(){
+            $("#steps-tabs").tabs({
+                active: 3, 
+                collapsible: false
+            });
+        });
+    </script>
     <!-- ЗАГРУЗКА -->
     <script>
     const finishBtn = document.getElementById('finish-btn');
