@@ -1,126 +1,139 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style3.css" />
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style3.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
-        <title>LUMA</title>
-    </head>
-    <body>
+    <title>LUMA</title>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-md">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="./images/logo.png" alt="LUMA Logo" width="86" height="59" loading="lazy" />
-                </a>
-            </div>
-        </nav>
-    </header>
-    <!-- ЗАГОЛОВОК -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-12 col-md-2 mb-4 px-0">
-                <button class="btn btn-lg w-80 text-center custom-btn mb-3 ">
-                    на главную
-                </button>
-            </div> 
-            <div class="col-12 col-md d-flex justify-content-end align-items-center">
-                <h2 class="custom-heading mb-4">ЗАПИСЬ</h2>
-            </div>
-            <div class="col-12 col-xxl-5">
-                
-                <div id="steps-tabs" class="steps-tabs-container">
-                    <ul class="steps-tabs-nav">
-                        <li><a href="#step-1">1</a></li>
-                        <li class="divider"><span class="divider-line"></span></li>
-                        <li><a href="#step-2">2</a></li>
-                        <li class="divider"><span class="divider-line"></span></li>
-                        <li><a href="#step-3">3</a></li>
-                        <li class="divider"><span class="divider-line"></span></li>
-                        <li><a href="#step-4" class="active-step">4</a></li>
-                    </ul>
-                    
-                    <div id="step-1" class="step-content">
-                        <p>Выбор тарифа</p>
-                    </div>
-                    <div id="step-2" class="step-content">
-                        <p>Выбор зала</p>
-                    </div>
-                    <div id="step-3" class="step-content">
-                        <p>Выбо даты и времени</p>
-                    </div>
-                    <div id="step-4" class="step-content active-step-content">
-                        <div class="container my-5">
-                            <div class="row">
-                                <div class="col-12 col-md d-flex flex-column px-0 booking-info">
-                                    <p class="label">ТАРИФ</p>
-                                        <span class="divider-line"></span>
-                                    <p class="value" style="color: #D82600;" >базовый</p>
-                                    <p class="label">ЗАЛ</p>
-                                        <span class="divider-line"></span>
-                                    <p class="value" style="color: #D82600;" >minimal</p>
-                                    <p class="label">ДАТА<br>И ВРЕМЯ</p>
-                                        <span class="divider-line"></span>
-                                    <p class="value" style="color: #D82600;">29.11 11:00</p>
-                                </div>
-                                <div class="col-12 col-md-6 form-column">
-                                    <div class="mb-4">
-                                        <label class="form-label custom-label">Имя</label>
-                                        <input type="text" class="form-control custom-input">
-                                    </div>
-                                    <div class="mb-4">
-                                        <label class="form-label custom-label">Телефон</label>
-                                        <input type="text" class="form-control custom-input">
-                                    </div>
-                                    <div class="mb-4">
-                                        <label class="form-label custom-label">Телеграм</label>
-                                        <input type="text" class="form-control custom-input">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img src="./images/logo.png" alt="LUMA Logo" width="86" height="59" loading="lazy" />
+          </a>
         </div>
+      </nav>
+    </header>
+
+    <!-- ГЛАВНЫЙ КОНТЕНТ -->
+    <div class="container mt-4">
+      <div class="row">
+        <!-- ЛЕВая КОЛОНКА: ФОРМА -->
+        <div class="col-12 col-lg-6 order-lg-2 mb-5">
+          <div class="row">
+            <div class="col-12">
+              <!-- ШАГИ СВЕРХУ (в одну линию) -->
+              <div id="steps-tabs" class="steps-tabs-container mb-5">
+                <ul class="steps-tabs-nav">
+                  <li><a href="#step-1">1</a></li>
+                  <li class="divider"><span class="divider-line"></span></li>
+                  <li><a href="#step-2">2</a></li>
+                  <li class="divider"><span class="divider-line"></span></li>
+                  <li><a href="#step-3">3</a></li>
+                  <li class="divider"><span class="divider-line"></span></li>
+                  <li><a href="#step-4" class="active-step">4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- СОДЕРЖИМОЕ ШАГОВ (скрытое) -->
+          <div id="step-1" class="step-content">
+            <p>Выбор тарифа</p>
+          </div>
+          <div id="step-2" class="step-content">
+            <p>Выбор зала</p>
+          </div>
+          <div id="step-3" class="step-content">
+            <p>Выбо даты и времени</p>
+          </div>
+          <div id="step-4" class="step-content active-step-content">
+            <!-- ФОРМА НА ШАГ 4 -->
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-4">
+                  <label class="form-label custom-label">Имя</label>
+                  <input type="text" class="form-control custom-input">
+                </div>
+                <div class="mb-4">
+                  <label class="form-label custom-label">Телефон</label>
+                  <input type="text" class="form-control custom-input">
+                </div>
+                <div class="mb-4">
+                  <label class="form-label custom-label">Телеграм</label>
+                  <input type="text" class="form-control custom-input">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА: ИТОГИ И ЗАГОЛОВОК -->
+        <div class="col-12 col-lg-6 order-lg-1 mb-5">
+          <div class="row mb-4">
+            <div class="col-12 col-md-2 px-0">
+              <button class="btn btn-lg w-80 text-center custom-btn mb-3">на главную</button>
+            </div>
+            <div class="col-12 col-md d-flex justify-content-end align-items-center">
+              <h2 class="custom-heading mb-0">ЗАПИСЬ</h2>
+            </div>
+          </div>
+          
+          <!-- ИНФОРМАЦИЯ О ВЫБОРАХ -->
+          <div class="booking-info">
+            <p class="label">ТАРИФ</p>
+            <span class="divider-line"></span>
+            <p class="value" style="color: #D82600;">базовый</p>
+            <p class="label">ЗАЛ</p>
+            <span class="divider-line"></span>
+            <p class="value" style="color: #D82600;">minimal</p>
+            <p class="label">ДАТА И ВРЕМЯ</p>
+            <span class="divider-line"></span>
+            <p class="value" style="color: #D82600;">29.11 11:00</p>
+          </div>
+        </div>
+      </div>
     </div>
-   
-    <!-- КНОПКИ -->
+
+    <!-- КНОПКИ ВНИЗУ -->
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-12 col-md-2 mb-4 px-0">
-                <button class="btn btn-lg w-80 text-center custom-btn3 mb-3 ">
-                    назад
-                </button>
-            </div> 
-            <div class="col-12 col-md d-flex justify-content-end mb-4 px-0">
-                <button class="btn btn-lg text-center custom-btn2 mb-3" id="finish-btn">
-  <span class="btn-text">завершить</span>
-  <span class="btn-loader"></span>
-</button>
-            </div> 
-        </div> 
+      <div class="row">
+        <div class="col-12 col-md-2 mb-4 px-0">
+          <button class="btn btn-lg w-80 text-center custom-btn3 mb-3">назад</button>
+        </div>
+        <div class="col-12 col-md d-flex justify-content-end mb-4 px-0">
+          <button class="btn btn-lg text-center custom-btn2 mb-3" id="finish-btn">
+            <span class="btn-text">завершить</span>
+            <span class="btn-loader"></span>
+          </button>
+        </div>
+      </div>
     </div>
+
     <script>
-        $(document).ready(function(){
-            $("#steps-tabs").tabs({
-                active: 3, 
-                collapsible: false
-            });
+      $(document).ready(function(){
+        $("#steps-tabs").tabs({
+          active: 3,
+          collapsible: false
         });
+      });
     </script>
+
     <!-- ЗАГРУЗКА -->
     <script>
-    const finishBtn = document.getElementById('finish-btn');
-    finishBtn.addEventListener('click', function (e) {      
-        this.classList.add('loading');   
+      const finishBtn = document.getElementById('finish-btn');
+      finishBtn.addEventListener('click', function (e) {
+        this.classList.add('loading');
         setTimeout(() => {
-        this.classList.remove('loading');
+          this.classList.remove('loading');
         }, 3000);
-    });
+      });
     </script>
   </body>
 </html>
