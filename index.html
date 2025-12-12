@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>LUMA</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/animation_index.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="header-logo" href="/">
+        <img
+            class="header-logo-image"
+            src="./images/logo.png"
+            alt="LUMA Logo"
+            width="86" height="59" loading="lazy">
+    </a> 
+    <nav class="header-menu text-b3">
+        <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <a class="header-menu-link is-current" href="index.html">Главная</a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="page2.html">Галерея</a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">Контакты</a>
+                </li>
+        </ul> 
+    </nav>
+  </header>
+  <main class="content">
+    <section class="banner">
+      <div class="banner-body">
+        <h1 class="banner-title">Luma</h1>
+        <div class="banner-info text-b1">
+          ВАША ИСТОРИЯ <br>
+          В ИДЕАЛЬНОМ СВЕТЕ
+          <a href="#" class="banner-button" style="font-size: 32px; line-height: 32px; letter-spacing: 0px; text-align: left; display: flex; align-items: center; justify-content: center; gap: 10px;">
+            на фотосессию
+            <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon">
+          </a>
+        </div>
+        <img class="overlay-photo" src="./images/photo1.png" alt="фото1">
+        <img class="overlay-photo" src="./images/photo2.png" alt="фото1">
+        <img class="overlay-photo" src="./images/photo3.png" alt="фото1">
+        <img class="overlay-photo" src="./images/photo4.png" alt="фото1">
+        <img class="overlay-photo" src="./images/photo5.png" alt="фото1">
+        <img class="overlay-photo" src="./images/photo6.png" alt="фото1">
+        </div>
+    </section>
+    <div class="gallery-bg">
+    <section class="photo-gallery">
+        <h2 style="display: none;">Заголовок страницы</h2>
+        <div class="photo-list">
+          <div class ="photo-item" style=" color: white;">
+          (последние <br>
+          фотосессии)
+        </div>
+          <div class="photo-item">
+            <img src="./images/main-gallery-1.png" alt="ROSE">
+            <div class="photo-caption">ROSE</div>
+          </div>
+          <div class="photo-item">
+            <img src="./images/main-gallery-2.png" alt="OFFICE">
+            <div class="photo-caption">OFFICE</div>
+          </div>
+          <div class="photo-item">
+            <img src="./images/main-gallery-3.png" alt="LIGHT">
+            <div class="photo-caption">LIGHT <br>
+              SHADOW</div>
+          </div>
+          <div class="photo-item">
+            <img src="./images/main-gallery-4.png" alt="MIRROR">
+            <div class="photo-caption">MIRROR</div>
+          </div>
+          <div class="photo-item">
+            <img src="./images/main-gallery-5.png" alt="LINES">
+            <div class="photo-caption">LINES</div>
+          </div>
+          <div class="photo-item">
+            <img src="./images/main-gallery-6.png" alt="BRIGHT">
+            <div class="photo-caption">BRIGHT</div>
+          </div>
+        </div>
+    </section>
+    </div>
+    <section class="halls">
+      <div class="halls-heading">
+        <div class="text-b4" style="width: 213px;">
+          (наши залы)
+        </div>
+        <h4>съёмочная<br>
+          площадка
+        </h4>
+      </div>
+      <img id="hall-image" src="./images/hall1.png" alt="Лофт Зал">
+      <div class="halls-info">
+        <h6 id="hall-title">Lumal<br>Minimal</h6>
+        <div class="halls-info text-b3" id="hall-description">
+          Светлый зал с идеальным естественным светом.<br>
+          Подходит для лаконичных фэшн-портретов,<br>
+          бьюти-съемки и каталогов.
+        </div>
+        <div class="arrow-buttons">
+          <button id="arrow-left" class="arrow-btn arrow-icon-left" aria-label="Предыдущие залы">
+            <img src="./images/arrow_button2.svg" alt="стрелка левая">
+          </button>
+          <button id="arrow-right" class="arrow-btn arrow-icon-right" aria-label="Следующие залы">
+            <img src="./images/arrow_button.svg" alt="стрелка правая">
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="label">
+      <div class="main-label">
+        <h4>СВЕТ.<br>
+        КАМЕРА.<br>
+        ЭМОЦИИ.<br>
+        </h4>
+      </div>
+      <img src="./images/label-forever.svg" alt="надпись" class="rotated-photo">
+    </section>
+    <section class="persons">
+      <div class="persons-heading">
+        <div class="text-b4" style="width: 213px;">
+          (фотографы)
+        </div>
+        <h4>Наши<br>профессионалы</h4>
+        <div class="arrow-buttons2">
+          <svg id="persons-prev" class="arrow-icon-left" width="97" height="65" viewBox="0 0 97 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer">
+            <path d="M3.44434 32L89.4443 32" stroke="currentColor" stroke-width="8"></path>
+            <path d="M62.4443 3L91.4443 32.1245L62.4443 61" stroke="currentColor" stroke-width="7"></path>
+          </svg>
+          <svg id="persons-next" class="arrow-icon-right" width="97" height="65" viewBox="0 0 97 65" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer">
+            <path d="M3.44434 32L89.4443 32" stroke="currentColor" stroke-width="8"></path>
+            <path d="M62.4443 3L91.4443 32.1245L62.4443 61" stroke="currentColor" stroke-width="7"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="persons-slider">
+        <div class="persons-track">
+        <div class="person-card">
+          <img src="./images/ph1.png" alt="Фотограф 1">
+          <div class="person-name">Александр Доронин</div>
+          <div class="person-style">дерзкий стиль</div>
+          <button class="person-more">
+            подробнее
+            <span class="person-more-arrow">→</span>
+          </button>
+        </div>
+        <div class="person-card">
+          <img src="./images/ph2.png" alt="Фотограф 2">
+          <div class="person-name">Мария Резник</div>
+          <div class="person-style">яркий стиль</div>
+          <button class="person-more">
+            подробнее
+            <span class="person-more-arrow">→</span>
+          </button>
+        </div>
+        <div class="person-card">
+          <img src="./images/ph3.png" alt="Фотограф 3">
+          <div class="person-name">Паша Дуров</div>
+          <div class="person-style">ретро стиль</div>
+          <button class="person-more">
+            подробнее
+            <span class="person-more-arrow">→</span>
+          </button>
+        </div>
+        <div class="person-card">
+          <img src="./images/ph4.png" alt="Фотограф 4">
+          <div class="person-name">Женя Чешкова</div>
+          <div class="person-style">креативные концепты и арт</div>
+          <button class="person-more">
+            подробнее
+            <span class="person-more-arrow">→</span>
+          </button>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="price">
+      <div class="price-heading">
+        <div class ="text-b4" style="width: 213px;">
+          (прайс)
+        </div>
+        <h4>какие услуги<br>
+        мы предоставляем?
+        </h4>
+      </div>
+      <div class="price-1">
+        <div class="horizontal-line"></div>
+        <div class="info-price">
+          <div class="paket text-b1">
+            «Базовый» пакет
+            <span style="color: #D82600;"> 8 000 ₽ </span>
+          </div>
+          <ul class="all-points">
+            <li>Аренда зала на 1 час</li>
+            <li>Услуги профессионального фотографа</li>
+            <li>Подбор 5 лучших ретушированных фотографий</li>
+          </ul>
+        </div>
+        <div class="button-wrapper">
+          <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0px; text-align: left">
+            записаться в студию
+            <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon">
+          </button>
+        </div>
+      </div>
+      <div class="price-1">
+        <div class="horizontal-line"></div>
+        <div class="info-price">
+          <div class="paket text-b1">
+            «Комфорт» пакет
+            <span style="color: #D82600;"> 12 000 ₽ </span>
+          </div>
+          <ul class="all-points">
+            <li>Аренда зала на 2 часа</li>
+            <li>Услуги профессионального фотографа</li>
+            <li>Услуги визажиста (создание 1 образа)</li>
+            <li>Подбор 10 лучших ретушированных фотографий</li>
+          </ul>
+        </div>
+        <div class="button-wrapper">
+          <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0px; text-align: left">
+            записаться в студию
+            <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon">
+          </button>
+        </div>
+      </div>
+      <div class="price-1">
+        <div class="horizontal-line"></div>
+        <div class="info-price">
+          <div class="paket text-b1">
+            <span style="font-size: 36px;"> «Премиум» пакет</span>
+            <span style="color: #D82600;"> 20 000 ₽ </span>
+          </div>
+          <ul class="all-points">
+            <li>Аренда зала на 3 часа</li>
+            <li>Услуги профессионального фотографа</li>
+            <li>Услуги визажиста и стилиста (создание 2 образов)</li>
+            <li>Подбор 20+ лучших ретушированных фотографий</li>
+            <li>Срочная обработка 3 фото в день съемки</li>
+          </ul>
+        </div>
+        <div class="button-wrapper">
+          <button class="button_filled_small" style="font-size: 24px; line-height: 29px; letter-spacing: 0px; text-align: left">
+            записаться в студию
+            <img src="./images/arrow-right-long.svg" alt="иконка" class="button-icon">
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="review">
+      <div class="reviews-heading">
+        <div class ="text-b4" style="width: 213px;">
+          (отзывы)
+        </div>
+        <h4>ваши<br>
+        впечатления
+        </h4>
+      </div>
+      <div class="all-reviews">
+      <div class="review-1">
+        <div class="about-person">
+          <img src="./images/photo-avatar-1.png" alt="аватар" class="photo-avatar">
+          <div class="person-info">
+            <div class="info-no-date">
+              <div class="text-b3">
+              Маша Минаева
+              </div>
+              <div class="stars">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+              </div>
+            </div>
+            <div class="date text-b3">
+              9 сентября 2025
+            </div>
+          </div>
+        </div>
+        <div class="review text-b3">
+            Идеальное место для съёмки. 
+            Приятная атмосфера, всё продумано до мелочей. 
+            Очень помог администратор в процессе. Рекомендую!
+        </div>
+      </div>
+      <div class="review-1">
+        <div class="about-person">
+          <img src="./images/photo-avatar-2.png" alt="аватар" class="photo-avatar">
+          <div class="person-info">
+            <div class="info-no-date">
+              <div class="text-b3">
+              Мира Пашкова
+              </div>
+              <div class="stars">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+              </div>
+            </div>
+            <div class="date text-b3">
+              14 августа 2025
+            </div>
+          </div>
+        </div>
+        <div class="review text-b3">
+            Здесь действительно любят своё дело и создают все условия для классных кадров. 
+            Отличный свет, стильный интерьер и дружелюбная обстановка.
+        </div>
+      </div>
+      <div class="review-1">
+        <div class="about-person">
+          <img src="./images/photo-avatar-3.png" alt="аватар" class="photo-avatar">
+          <div class="person-info">
+            <div class="info-no-date">
+              <div class="text-b3">
+              Паша Вирсу
+              </div>
+              <div class="stars">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+              </div>
+            </div>
+            <div class="date text-b3">
+              14 июля 2025
+            </div>
+          </div>
+        </div>
+        <div class="review text-b3">
+            Свет волшебный, пространство очень стильное и многогранное. 
+            Получил море удовольствия и шикарные фотографии.
+        </div>
+      </div>
+      <div class="review-1">
+        <div class="about-person">
+          <img src="./images/photo-avatar-4.png" alt="аватар" class="photo-avatar">
+          <div class="person-info">
+            <div class="info-no-date">
+              <div class="text-b3">
+              Марсель
+              </div>
+              <div class="stars">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+              </div>
+            </div>
+            <div class="date text-b3">
+              2 июня 2025
+            </div>
+          </div>
+        </div>
+        <div class="review text-b3">
+            Лучшая студия в городе! 
+            Свет, пространство, vibe — всё на высоте!
+        </div>
+      </div>
+      <div class="review-1">
+        <div class="about-person">
+          <img src="./images/photo-avatar-5.png" alt="аватар" class="photo-avatar">
+          <div class="person-info">
+            <div class="info-no-date">
+              <div class="text-b3">
+              Екатерина Чен
+              </div>
+              <div class="stars">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+                <img src="./images/star.png" alt="звезда">
+              </div>
+            </div>
+            <div class="date text-b3">
+              1 мая 2025
+            </div>
+          </div>
+        </div>
+        <div class="review text-b3">
+            Команда профессионалов! 
+            От первой консультации до окончания съёмки — всё чётко, вежливо и вдохновляюще. 
+            Студия оборудована по последнему слову техники.
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="FAQ">
+      <div class="FAQ-heading">
+        <div class="text-b4" style="width: 213px;">
+          (FAQ)
+        </div>
+        <h4>часто задаваемые<br>
+          вопросы
+        </h4>
+      </div>
+      <div class="accordion">
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Можно ли приходить со своим реквизитом?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>да, можно! креатив всегда приветствуется.</p>
+            </div>
+        </div>
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Какое количество человек разрешено на съемке?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>обычно разрешено до 5 человек, но по договорённости возможно больше.</p>
+            </div>
+        </div>
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Можно ли отменить запись в день фотосессии?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>отмена в день фотосессии невозможна, предоплата не возвращается.</p>
+            </div>
+        </div>
+        <div class="accordion__item text-b4">
+            <div class="accordion-item__header">
+                <p>Какое оборудование вы используете?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>используется профессиональная камера, студийный свет и необходимые аксессуары.</p>
+          </div>
+        </div>
+                <div class="accordion__item  text-b4">
+            <div class="accordion-item__header">
+                <p>Можно ли получить исходные фотографии?</p>
+                <svg class="arrow-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 22.3948L18.105 31.4998L27.21 22.3948" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.105 5.99987L18.105 31.2449" stroke="#222121" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="accordion-item__body">
+                <p>да, по запросу исходные файлы могут быть предоставлены.</p>
+          </div>
+        </div>
+    </div>
+
+    </section>
+  </main>
+ <footer class="footer-grid">
+        <div class="footer-logo" style="grid-column: 1 / 3; min-width: 180px; flex-shrink: 0;">
+            <img src="./images/logo.png" alt="LUMA">
+        </div>
+        <nav class="footer-main" style="grid-column: 6 / 8;">
+            <text-b3>ОСНОВНОЕ</text-b3>
+            <div class="footer-info">
+            <ul>
+            <li><a href="index.html">главная</a></li>
+            <li><a href="/">галерея</a></li>
+            <li><a href="/">контакты</a></li>
+            </ul>
+            </div>
+        </nav>
+        <div class="footer-socials" style="grid-column: 8 / 10;">
+        <text-b3>СОЦ.СЕТИ</text-b3>
+        <div class="footer-info">
+            <div class="social-item">
+            <div class="social-name">телеграм</div>
+                <a href="https://t.me/ulipolonskaya" target="_blank" class="social-link" style="color: #909192;">lumastudio</a>
+            </div>
+            <div class="social-item">
+            <div class="social-name">инстаграм</div>
+            <a href="https://www.instagram.com/ulipolonskaya" target="_blank" class="social-link" style="color: #909192;">LUMA_studio</a>
+            </div>
+            <div class="social-item">
+            <div class="social-name">вконтакте</div>
+            <a href="https://vk.com/ulipolonskaya" target="_blank" class="social-link" style="color: #909192;">LUMAstudio</a>
+            </div>
+        </div>
+        </div>
+        <div class="footer-contacts" style="grid-column: 10 / 13;">
+            <text-b3>КОНТАКТЫ</text-b3>
+            <div class="footer-info">
+                <div class="address">
+                адрес<br>
+                <span style="color: #909192;">Заставская улица, 46к1</span>
+                </div>
+                <div class="contacts-phone">
+                телефон<br>
+                <span style="color: #909192;">+7 (812) 988-44-63</span>
+                </div>
+                <div class="contacts-email">
+                email<br>
+                <span style="color: #909192;">lumastudio@mail.ru</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body> 

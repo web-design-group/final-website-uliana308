@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/style3.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <title>LUMA</title>
+    </head>
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="./images/logo.png" alt="LUMA Logo" width="86" height="59" loading="lazy">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- ЗАГОЛОВОК -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-2 mb-4 px-0">
+                <button class="btn btn-lg w-80 text-center custom-btn mb-3 ">
+                    на главную
+                </button>
+            </div> 
+            <div class="col-12 col-md d-flex justify-content-end align-items-center">
+                <h2 class="custom-heading mb-4">ЗАПИСЬ</h2>
+            </div>
+            <div class="col-12 col-xxl-5">
+                <nav aria-label="Steps">
+                    <ul class="pagination justify-content-end custom-heading-wrapper mb-0">
+                        <li class="page-item">
+                            <a class="page-link page-link-big" href="/">
+                                1
+                            </a>
+                        </li>
+
+                        <li class="page-item d-flex align-items-center">
+                            <span class="divider-line"></span>
+                        </li>
+
+                        <li class="page-item">
+                            <a class="page-link page-link-big" href="/">
+                                2
+                            </a>
+                        </li>
+
+                        <li class="page-item d-flex align-items-center">
+                            <span class="divider-line"></span>
+                        </li>
+
+                        <li class="page-item">
+                            <a class="page-link page-link-big" href="/">
+                                3
+                            </a>
+                        </li>
+
+                        <li class="page-item d-flex align-items-center">
+                            <span class="divider-line"></span>
+                        </li>
+
+                        <li class="page-item">
+                            <a class="page-link page-link-big" href="page3.html">
+                                4
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- ОСНОВНАЯ ИНФА -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md d-flex flex-column px-0 booking-info">
+                <p class="label">ТАРИФ</p>
+                    <span class="divider-line"></span>
+                <p class="value" style="color: #D82600;" >базовый</p>
+                <p class="label">ЗАЛ</p>
+                    <span class="divider-line"></span>
+                <p class="value" style="color: #D82600;" >minimal</p>
+                <p class="label">ДАТА<br>И ВРЕМЯ</p>
+                    <span class="divider-line"></span>
+                <p class="value" style="color: #D82600;">29.11 11:00</p>
+            </div>
+            <div class="col-12 col-md-6 form-column">
+                <div class="mb-4">
+                    <label class="form-label custom-label">Имя</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="mb-4">
+                    <label class="form-label custom-label">Телефон</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="mb-4">
+                    <label class="form-label custom-label">Телеграм</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КНОПКИ -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-2 mb-4 px-0">
+                <button class="btn btn-lg w-80 text-center custom-btn3 mb-3 ">
+                    назад
+                </button>
+            </div> 
+            <div class="col-12 col-md d-flex justify-content-end mb-4 px-0">
+                <button class="btn btn-lg text-center custom-btn2 mb-3" id="finish-btn">
+  <span class="btn-text">завершить</span>
+  <span class="btn-loader"></span>
+</button>
+            </div> 
+        </div> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
+    <!-- ЗАГРУЗКА -->
+    <script>
+    const finishBtn = document.getElementById('finish-btn');
+    finishBtn.addEventListener('click', function (e) {      
+        this.classList.add('loading');   
+        setTimeout(() => {
+        this.classList.remove('loading');
+        }, 3000);
+    });
+    </script>
+  </body>
+</html>
