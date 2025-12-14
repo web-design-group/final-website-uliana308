@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>LUMA</title>
+  <link href="./css/style4.css" rel="stylesheet">
+  <link href="./css/responsive-carousel.slide.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="carousel" data-transition="slide" data-autoplay="true">
+      <div>
+        <img src="./images/2.jpg" alt="Фото 1">
+      </div>
+      <div>
+        <img src="./images/4.jpg" alt="Фото 3">
+      </div>
+      <div>
+        <img src="./images/5.jpg" alt="Фото 4">
+      </div>
+      <div>
+        <img src="./images/6.jpg" alt="Фото 5">
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-arrow prev" aria-label="Предыдущий слайд">
+      <img src="./images/arrow_button2.svg" alt="стрелка левая">
+    </button>
+    <button class="carousel-arrow next" aria-label="Следующий слайд">
+      <img src="./images/arrow_button.svg" alt="стрелка правая">
+    </button>
+  </div>
+  <a href="page2.html" class="close-button" aria-label="Закрыть">
+    <img src="./images/close.svg" alt="">
+  </a>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/responsive-carousel.min.js"></script>
+<script>
+  $(function () {
+    var $carousel = $('.carousel').carousel();
+    $('.carousel-arrow.prev').on('click', function () {
+      $carousel.carousel('prev');
+    });
+    $('.carousel-arrow.next').on('click', function () {
+      $carousel.carousel('next');
+    });
+  });
+</script>
+</body>
+</html>
