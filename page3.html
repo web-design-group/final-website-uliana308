@@ -86,20 +86,23 @@
                     <span class="divider-line"></span>
                 <p class="value" style="color: #D82600;">29.11 11:00</p>
             </div>
-            <div class="col-12 col-md-6 form-column">
+            <form id="myform" class="col-12 col-md-6 form-column">
+                <input type="hidden" id="tariff" name="tariff" value="базовый">
+                <input type="hidden" id="hall" name="hall" value="minimal">
+                <input type="hidden" id="date_time" name="date_time" value="29.11 11:00">
                 <div class="mb-4">
-                    <label class="form-label custom-label">Имя</label>
-                    <input type="text" class="form-control custom-input">
+                    <label for="user_name" class="form-label custom-label">Имя</label>
+                    <input type="text" id="user_name" name="user_name" class="form-control custom-input" required>
                 </div>
                 <div class="mb-4">
-                    <label class="form-label custom-label">Телефон</label>
-                    <input type="text" class="form-control custom-input">
+                    <label for="user_phone" class="form-label custom-label">Телефон</label>
+                    <input type="tel" id="user_phone" name="user_phone" class="form-control custom-input" required>
                 </div>
                 <div class="mb-4">
-                    <label class="form-label custom-label">Телеграм</label>
-                    <input type="text" class="form-control custom-input">
+                    <label for="user_telegram" class="form-label custom-label">Телеграм</label>
+                    <input type="text" id="user_telegram" name="user_telegram" class="form-control custom-input">
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <!-- КНОПКИ -->
@@ -111,7 +114,7 @@
                 </button>
             </div> 
             <div class="col-12 col-md d-flex justify-content-end mb-4 px-0">
-                <button class="btn btn-lg text-center custom-btn2 mb-3" id="finish-btn">
+                <button type="submit" form="myform" class="btn btn-lg text-center custom-btn2 mb-3" id="finish-btn">
   <span class="btn-text">завершить</span>
   <span class="btn-loader"></span>
 </button>
@@ -120,14 +123,31 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> 
-    <!-- ЗАГРУЗКА -->
+    <!-- EMAILJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
     <script>
+    emailjs.init({ publicKey: "PrfggfTW1KkYzCMPC" });
+
+    const form = document.getElementById('myform');
     const finishBtn = document.getElementById('finish-btn');
-    finishBtn.addEventListener('click', function (e) {      
-        this.classList.add('loading');   
-        setTimeout(() => {
-        this.classList.remove('loading');
-        }, 3000);
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        finishBtn.classList.add('loading');
+        finishBtn.disabled = true;
+
+        emailjs.sendForm("service_k9xplj3", "template_7g0thmk", "#myform")
+            .then(() => {
+                alert("Заявка отправлена! Мы свяжемся с вами.");
+                form.reset();
+            })
+            .catch((err) => {
+                alert("Ошибка: " + JSON.stringify(err));
+            })
+            .finally(() => {
+                finishBtn.classList.remove('loading');
+                finishBtn.disabled = false;
+            });
     });
     </script>
   </body>
